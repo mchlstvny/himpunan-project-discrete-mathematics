@@ -5,7 +5,7 @@ A simple Python library for performing set operations (Himpunan), supports Fract
 
 You can install this package from PyPI using pip:
 ```
-pip install mtkdiskrit-himpunan-group1-ucmakassar
+pip install himpunan-group1-discrete-mathematics
 ```
 or if you're running it locally
 '''
