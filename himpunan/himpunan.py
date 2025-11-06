@@ -74,6 +74,13 @@ class Himpunan:
     def __pow__(self, other):
         result = [(a, b) for a in self.data for b in other.data]
         return result
+    
+    def Komplemen(self, semesta):
+        result = [x for x in semesta.data if x not in self.data]
+        return Himpunan(*result)
+    
+    def __abs__(self):
+        return 2 ** len(self.data)
 
     def ListKuasa(self):
         hasil = [[]]
