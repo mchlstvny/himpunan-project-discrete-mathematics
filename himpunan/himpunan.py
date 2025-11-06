@@ -12,9 +12,13 @@ class Himpunan:
                 self._tambah(item)
 
     def _tambah(self, item):
-        val = float(item) if isinstance(item, (int, float, Decimal, Fraction)) else item
-        if val not in self.data:
-            self.data.append(val)
+        if isinstance(item, (int, float, Decimal, Fraction)):
+            for existing in self.data:
+                if isinstance(existing, (int, float, Decimal, Fraction)):
+                    if float(existing) == float(item):
+                        return
+        if item not in self.data:
+            self.data.append(item)
 
     def __repr__(self):
         return "{" + ", ".join(map(str, self.data)) + "}"
